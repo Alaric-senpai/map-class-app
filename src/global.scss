@@ -24,6 +24,11 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+@import "primeflex/primeflex.css";
+@import "primeng/resources/primeng.css";
+@import "primeng/resources/themes/lara-light-teal/theme.css";
+@import "primeicons/primeicons.css";
+
 
 /**
  * Ionic Dark Mode
@@ -34,4 +39,8 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+// @import '@ionic/angular/css/palettes/dark.system.css';
+
+body{
+    background-image: url('assets/beach.jpg');
+}

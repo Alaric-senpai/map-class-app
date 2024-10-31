@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,50 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Login</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <p-card styleClass="relative m-auto w-10 md:w-5 text-center transform border-2 border-dotted border-round-2xl shadow-5 p-4 mt-5">
+    <ng-template pTemplate="header">
+      <div class="flex justify-content-center align-items-center text-2xl uppercase">
+        Login here
+      </div>
+    </ng-template>
+
+
+    <div class="form">
+      <div class="field">
+        <label for="username" class="line-height-3 w-10 m-auto my-2 text-xl text-left pl-3">Username</label>
+        <p-inputGroup styleClass="w-10 m-auto">
+          <i class="pi pi-user h-3rem w-2 flex align-items-center justify-content-center bg-bluegray-100"></i>
+          <input type="text" pInputText class="h-3rem w-10 appearance-none outline-none surface-overlay text-base p-2  border-round-right border-primary">
+        </p-inputGroup>
+      </div>
+      <div class="field">
+        <label for="password" class="line-height-3 w-10 m-auto my-2 text-xl text-left pl-3">Password</label>
+        <p-inputGroup styleClass="w-10 m-auto">
+          <i class="pi pi-lock h-3rem w-2 flex align-items-center justify-content-center bg-bluegray-100"></i>
+          <input type="text" pInputText class="h-3rem w-10 appearance-none outline-none surface-overlay text-base p-2  border-round-right border-primary">
+        </p-inputGroup>
+      </div>
+      <div class="field">
+        <div class="w-10 m-auto">
+          <p-button icon="pi pi-iconName" id="login" severity="info" label="login" styleClass="p-2 h-3rem w-full mt-2" ></p-button>
+        </div>
+      </div>
+    </div>
+    
+  </p-card>
+
+
+  <ion-alert
+  trigger="login"
+  header="Thanks"
+  message =" thanks for logging in . this is the furthest you can go"
+  [buttons]="alertButtons"
+></ion-alert>
+
+
+
 </ion-content>
